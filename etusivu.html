@@ -6,11 +6,81 @@
   <title>Sudenpaja – Kotisivut</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Väriteema: punamusta */
+    :root {
+      --sudenpunainen: #d32f2f;
+      --sudenmusta: #121212;
+      --sudenharmaa: #1e1e1e;
+    }
+
+    body {
+      background-color: var(--sudenmusta);
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navbar {
+      background-color: var(--sudenmusta) !important;
+    }
+
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--sudenpunainen) !important;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--sudenmusta), var(--sudenharmaa));
+      color: #fff;
+    }
+
+    header h1 {
+      color: var(--sudenpunainen);
+      font-weight: 700;
+    }
+
+    .btn-primary {
+      background-color: var(--sudenpunainen);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #b71c1c;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    section h2 {
+      color: var(--sudenpunainen);
+      font-weight: 600;
+    }
+
+    section.bg-light {
+      background-color: var(--sudenharmaa) !important;
+      color: #ddd;
+    }
+
+    footer {
+      background-color: var(--sudenmusta);
+      border-top: 1px solid var(--sudenpunainen);
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
 <!-- Header & Navigaatio -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#">Sudenpaja</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -19,28 +89,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Kotisivu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Palvelut</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blogi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tietoa meistä</a>
-        </li>
+        <li class="nav-item"><a class="nav-link active" href="#">Kotisivu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#palvelut">Palvelut</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blogi">Blogi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tietoa">Tietoa meistä</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Hero-osio -->
-<header class="bg-light py-5 text-center">
+<header class="py-5 text-center">
   <div class="container">
     <h1 class="display-4">Tervetuloa Sudenpajan kotisivuille</h1>
     <p class="lead">3D-tulostusta, rakentelua ja ratkaisuja</p>
@@ -48,39 +108,39 @@
   </div>
 </header>
 
-<!-- Placeholder-osioita sisällölle -->
-<section id="palvelut" class="py-5">
+<!-- Sisältöosiot -->
+<section id="palvelut">
   <div class="container">
     <h2 class="mb-4">Palvelut</h2>
-    <p>Tähän voit kuvata tarjoamasi palvelut.</p>
+    <p>Kuvaus palveluista – esim. 3D-tulostus, prototypointi, elektroniikan korjaukset.</p>
   </div>
 </section>
 
-<section id="portfolio" class="py-5 bg-light">
+<section id="portfolio" class="bg-light">
   <div class="container">
     <h2 class="mb-4">Portfolio</h2>
-    <p>Tähän voit lisätä projektiesi esittelyä.</p>
+    <p>Esittelyä projekteista – voit lisätä kuvia ja esimerkkejä töistäsi.</p>
   </div>
 </section>
 
-<section id="blogi" class="py-5">
+<section id="blogi">
   <div class="container">
     <h2 class="mb-4">Blogi</h2>
-    <p>Tähän tulee blogitekstejä.</p>
+    <p>Blogitekstit, uutiset ja vinkit.</p>
   </div>
 </section>
 
-<section id="tietoa" class="py-5 bg-light">
+<section id="tietoa" class="bg-light">
   <div class="container">
     <h2 class="mb-4">Tietoa meistä</h2>
-    <p>Kerro yrityksestäsi ja tiimistäsi.</p>
+    <p>Kerro Sudenpajan tarina ja taustatiimi.</p>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
+<footer class="text-white text-center py-3">
   <div class="container">
-    <p class="mb-0">&copy; 2025 Sudenpaja – Kaikki oikeudet pidätetään</p>
+    <p>&copy; 2025 Sudenpaja – Kaikki oikeudet pidätetään</p>
   </div>
 </footer>
 
@@ -88,4 +148,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
