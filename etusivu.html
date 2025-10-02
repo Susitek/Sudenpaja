@@ -6,98 +6,11 @@
   <title>Sudenpaja – Kotisivut</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Väriteema: punamusta */
-    :root {
-      --sudenpunainen: #d32f2f;
-      --sudenmusta: #121212;
-      --sudenharmaa: #1e1e1e;
-    }
-
-    body {
-      background-color: var(--sudenmusta);
-      color: #eee;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .navbar {
-      background-color: var(--sudenmusta) !important;
-    }
-
-    .navbar-brand, .nav-link {
-      color: #fff !important;
-      font-weight: 500;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      color: var(--sudenpunainen) !important;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--sudenmusta), var(--sudenharmaa));
-      color: #fff;
-    }
-
-    header h1 {
-      color: var(--sudenpunainen);
-      font-weight: 700;
-    }
-
-    .btn-primary {
-      background-color: var(--sudenpunainen);
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #b71c1c;
-    }
-
-    section {
-      padding: 4rem 0;
-    }
-
-    section h2 {
-      color: var(--sudenpunainen);
-      font-weight: 600;
-    }
-
-    section.bg-light {
-      background-color: var(--sudenharmaa) !important;
-      color: #ddd;
-    }
-
-    .card {
-      background-color: var(--sudenharmaa);
-      color: #eee;
-      border: 1px solid #333;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-    }
-
-    .card-title {
-      color: var(--sudenpunainen);
-      font-weight: 600;
-    }
-
-    footer {
-      background-color: var(--sudenmusta);
-      border-top: 1px solid var(--sudenpunainen);
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 <body>
 
 <!-- Header & Navigaatio -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <a class="navbar-brand" href="#">Sudenpaja</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
@@ -106,18 +19,28 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Kotisivu</a></li>
-        <li class="nav-item"><a class="nav-link" href="#palvelut">Palvelut</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#blogi">Blogi</a></li>
-        <li class="nav-item"><a class="nav-link" href="#tietoa">Tietoa meistä</a></li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Kotisivu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Palvelut</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blogi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tietoa meistä</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Hero-osio -->
-<header class="py-5 text-center">
+<header class="bg-light py-5 text-center">
   <div class="container">
     <h1 class="display-4">Tervetuloa Sudenpajan kotisivuille</h1>
     <p class="lead">3D-tulostusta, rakentelua ja ratkaisuja</p>
@@ -125,104 +48,39 @@
   </div>
 </header>
 
-<!-- Palvelut -->
-<section id="palvelut">
+<!-- Placeholder-osioita sisällölle -->
+<section id="palvelut" class="py-5">
   <div class="container">
-    <h2 class="mb-5 text-center">Palvelut</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="3D-tulostus">
-          <div class="card-body">
-            <h5 class="card-title">3D-tulostus</h5>
-            <p class="card-text">Protot, varaosat ja yksilölliset suunnitelmat nopeasti ja tarkasti.</p>
-            <a href="#" class="btn btn-primary">Lue lisää</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Elektroniikka">
-          <div class="card-body">
-            <h5 class="card-title">Elektroniikka</h5>
-            <p class="card-text">Korjaukset, modaukset ja custom-ratkaisut elektroniikan parissa.</p>
-            <a href="#" class="btn btn-primary">Lue lisää</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Suunnittelu">
-          <div class="card-body">
-            <h5 class="card-title">Suunnittelu</h5>
-            <p class="card-text">3D-mallinnus, tuotesuunnittelu ja räätälöidyt ratkaisut.</p>
-            <a href="#" class="btn btn-primary">Lue lisää</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 class="mb-4">Palvelut</h2>
+    <p>Tähän voit kuvata tarjoamasi palvelut.</p>
   </div>
 </section>
 
-<!-- Portfolio -->
-<section id="portfolio" class="bg-light">
+<section id="portfolio" class="py-5 bg-light">
   <div class="container">
-    <h2 class="mb-5 text-center">Portfolio</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Projekti 1">
-          <div class="card-body">
-            <h5 class="card-title">Projekti 1</h5>
-            <p class="card-text">Lyhyt kuvaus toteutetusta projektista.</p>
-            <a href="#" class="btn btn-primary">Katso lisää</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Projekti 2">
-          <div class="card-body">
-            <h5 class="card-title">Projekti 2</h5>
-            <p class="card-text">Lyhyt kuvaus toteutetusta projektista.</p>
-            <a href="#" class="btn btn-primary">Katso lisää</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Projekti 3">
-          <div class="card-body">
-            <h5 class="card-title">Projekti 3</h5>
-            <p class="card-text">Lyhyt kuvaus toteutetusta projektista.</p>
-            <a href="#" class="btn btn-primary">Katso lisää</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 class="mb-4">Portfolio</h2>
+    <p>Tähän voit lisätä projektiesi esittelyä.</p>
   </div>
 </section>
 
-<!-- Blogi -->
-<section id="blogi">
+<section id="blogi" class="py-5">
   <div class="container">
     <h2 class="mb-4">Blogi</h2>
-    <p>Blogitekstit, uutiset ja vinkit.</p>
+    <p>Tähän tulee blogitekstejä.</p>
   </div>
 </section>
 
-<!-- Tietoa -->
-<section id="tietoa" class="bg-light">
+<section id="tietoa" class="py-5 bg-light">
   <div class="container">
     <h2 class="mb-4">Tietoa meistä</h2>
-    <p>Kerro Sudenpajan tarina ja taustatiimi.</p>
+    <p>Kerro yrityksestäsi ja tiimistäsi.</p>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="text-white text-center py-3">
+<footer class="bg-dark text-white text-center py-3">
   <div class="container">
-    <p>&copy; 2025 Sudenpaja – Kaikki oikeudet pidätetään</p>
+    <p class="mb-0">&copy; 2025 Sudenpaja – Kaikki oikeudet pidätetään</p>
   </div>
 </footer>
 
