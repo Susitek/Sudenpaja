@@ -3,89 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sudenpaja – Kotisivut</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Sudenpaja – 3D-tulostusta, rakentelua ja ratkaisuja</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Header & Navigaatio -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Sudenpaja</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Valikko">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Kotisivu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Palvelut</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blogi</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tietoa meistä</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero-osio -->
-<header class="bg-light py-5 text-center">
-  <div class="container">
-    <h1 class="display-4">Tervetuloa Sudenpajan kotisivuille</h1>
-    <p class="lead">3D-tulostusta, rakentelua ja ratkaisuja</p>
-    <a href="#palvelut" class="btn btn-primary btn-lg mt-3">Tutustu palveluihin</a>
-  </div>
+<!-- Navigaatio -->
+<header>
+  <nav class="navbar">
+    <div class="logo">Sudenpaja</div>
+    <ul class="nav-links">
+      <li><a href="#home">Kotisivu</a></li>
+      <li><a href="#services">Palvelut</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#blog">Blogi</a></li>
+      <li><a href="#about">Tietoa meistä</a></li>
+      <li><a href="#contact">Ota yhteyttä</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- Placeholder-osioita sisällölle -->
-<section id="palvelut" class="py-5">
-  <div class="container">
-    <h2 class="mb-4">Palvelut</h2>
-    <p>Tähän voit kuvata tarjoamasi palvelut.</p>
+<!-- Hero -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Sudenpaja</h1>
+    <p>3D-tulostusta, rakentelua ja ratkaisuja – yksityisille ja yrityksille.</p>
+    <a href="#contact" class="btn">Ota yhteyttä</a>
   </div>
 </section>
 
-<section id="portfolio" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4">Portfolio</h2>
-    <p>Tähän voit lisätä projektiesi esittelyä.</p>
+<!-- Palvelut -->
+<section id="services" class="section">
+  <h2>Palvelut</h2>
+  <div class="services-grid">
+    <div class="service">
+      <h3>3D-tulostus</h3>
+      <p>Protot, varaosat ja yksilölliset tuotteet laadukkaasti.</p>
+    </div>
+    <div class="service">
+      <h3>Elektroniikkarakentelu</h3>
+      <p>Korjaukset, pienprojektit ja erikoisratkaisut.</p>
+    </div>
+    <div class="service">
+      <h3>FPV & RC</h3>
+      <p>Dronet, varaosat ja mittatilausratkaisut.</p>
+    </div>
   </div>
 </section>
 
-<section id="blogi" class="py-5">
-  <div class="container">
-    <h2 class="mb-4">Blogi</h2>
-    <p>Tähän tulee blogitekstejä.</p>
+<!-- Portfolio -->
+<section id="portfolio" class="section dark">
+  <h2>Portfolio</h2>
+  <div class="portfolio-grid">
+    <div class="portfolio-item"><img src="images/sample1.jpg" alt="3D-tuloste"></div>
+    <div class="portfolio-item"><img src="images/sample2.jpg" alt="Elektroniikka"></div>
+    <div class="portfolio-item"><img src="images/sample3.jpg" alt="FPV"></div>
   </div>
 </section>
 
-<section id="tietoa" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4">Tietoa meistä</h2>
-    <p>Kerro yrityksestäsi ja tiimistäsi.</p>
-  </div>
+<!-- Blogi -->
+<section id="blog" class="section">
+  <h2>Blogi</h2>
+  <p>Tulossa pian – seuraa Sudenpajaa!</p>
 </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
-  <div class="container">
-    <p class="mb-0">&copy; 2025 Sudenpaja – Kaikki oikeudet pidätetään</p>
-  </div>
+<!-- Tietoa meistä -->
+<section id="about" class="section dark">
+  <h2>Tietoa meistä</h2>
+  <p>Sudenpaja on suomalainen paja, jossa intohimo ja teknologia kohtaavat. 
+     Tarjoamme käytännöllisiä ratkaisuja 3D-tulostuksesta elektroniikkaan.</p>
+</section>
+
+<!-- Yhteydenotto -->
+<section id="contact" class="section">
+  <h2>Ota yhteyttä</h2>
+  <form action="https://formspree.io/f/mayplznk" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Nimi" required>
+    <input type="email" name="email" placeholder="Sähköposti" required>
+    <input type="tel" name="phone" placeholder="Puhelinnumero">
+    <textarea name="message" placeholder="Viesti" required></textarea>
+    <button type="submit" class="btn">Lähetä</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Sudenpaja – Kaikki oikeudet pidätetään.</p>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
