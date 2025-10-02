@@ -79,13 +79,21 @@
 <!-- Yhteydenotto -->
 <section id="contact" class="section">
   <h2>Ota yhteyttä</h2>
-  <form action="https://formspree.io/f/mzzjggay" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Nimi" required>
-    <input type="email" name="email" placeholder="Sähköposti" required>
-    <input type="tel" name="phone" placeholder="Puhelinnumero">
-    <textarea name="message" placeholder="Viesti" required></textarea>
-    <button type="submit" class="btn">Lähetä</button>
-  </form>
+  <form
+  action="https://formspree.io/f/mzzjggay"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 </section>
 
 <footer>
