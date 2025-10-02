@@ -1,15 +1,20 @@
+/* Perustyyli */
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background: #111;
+  background: #0b0b0b;
   color: #eee;
+  line-height: 1.6;
 }
 
+/* Navigaatio */
 header {
-  background: #000;
+  background: rgba(0, 0, 0, 0.85);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
+  z-index: 999;
+  backdrop-filter: blur(6px);
 }
 
 .navbar {
@@ -20,8 +25,22 @@ header {
 
 .logo {
   font-weight: 800;
+  font-size: 1.7rem;
   color: #e60000;
-  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.logo::after {
+  content: "█";
+  animation: blink 1s infinite;
+  margin-left: 3px;
+  color: #fff;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .nav-links {
@@ -34,15 +53,18 @@ header {
   text-decoration: none;
   color: #eee;
   font-weight: 600;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
   color: #e60000;
 }
 
+/* Hero */
 .hero {
   height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/hero.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("../images/hero.jpg") no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,41 +72,82 @@ header {
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #e60000;
+  font-weight: 800;
+  text-transform: uppercase;
+  animation: glitch 1.5s infinite;
 }
 
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: #ddd;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 2px #000, -2px -2px #e60000; }
+  25% { text-shadow: -2px -2px #000, 2px 2px #e60000; }
+  50% { text-shadow: 2px -2px #000, -2px 2px #e60000; }
+  100% { text-shadow: -2px 2px #000, 2px -2px #e60000; }
+}
+
+/* Painikkeet */
 .btn {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   padding: 0.8rem 1.5rem;
   background: #e60000;
   color: #fff;
   font-weight: bold;
   border-radius: 5px;
   text-decoration: none;
+  box-shadow: 0 0 15px rgba(230,0,0,0.6);
+  transition: 0.3s;
 }
 
+.btn:hover {
+  background: #ff1a1a;
+  box-shadow: 0 0 25px rgba(230,0,0,0.9);
+}
+
+/* Osiot */
 .section {
   padding: 4rem 2rem;
   text-align: center;
 }
 
 .section.dark {
-  background: #222;
+  background: #161616;
 }
 
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #e60000;
+  text-transform: uppercase;
+}
+
+/* Kortit */
 .services-grid, .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .service, .portfolio-item {
-  background: #111;
+  background: rgba(20,20,20,0.85);
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 15px rgba(255,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover, .portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(230,0,0,0.6);
 }
 
 .portfolio-item img {
@@ -92,6 +155,7 @@ header {
   border-radius: 10px;
 }
 
+/* Lomake */
 .contact-form {
   max-width: 600px;
   margin: auto;
@@ -102,17 +166,27 @@ header {
 
 .contact-form input, .contact-form textarea {
   padding: 0.8rem;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #111;
+  color: #eee;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: #e60000;
+  box-shadow: 0 0 8px rgba(230,0,0,0.6);
 }
 
 .contact-form button {
   cursor: pointer;
 }
 
+/* Footer */
 footer {
   background: #000;
   padding: 1rem;
   text-align: center;
   color: #aaa;
+  font-size: 0.9rem;
 }
