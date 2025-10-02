@@ -72,11 +72,12 @@ header {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
-  color: #e60000;
-  font-weight: 800;
-  text-transform: uppercase;
-  animation: glitch 1.5s infinite;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: red; /* kiinteä punainen */
+    letter-spacing: 8px;
 }
 
 .hero p {
