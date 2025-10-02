@@ -233,3 +233,37 @@ footer {
     background-color: #cc0000; /* tumma punainen hover-efekti */
     transform: scale(1.05);
 }
+
+/* Mobiiliversio alkaa   */
+/* ===================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+    .hero p {
+        font-size: 1rem;
+        margin-top: 15px;
+        line-height: 1.4;
+    }
+    .hero .btn {
+        font-size: 0.85rem;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .hero .btn {
+        font-size: 0.8rem;
+        padding: 10px 25px;
+    }
+}
+/* ===================== */
+/* Mobiiliversio loppuu  */
