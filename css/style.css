@@ -199,3 +199,37 @@ footer {
   color: #aaa;
   font-size: 0.9rem;
 }
+
+/* Hero subtitle */
+.hero p {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #ff4444; /* punertava sävy, ei vilkkumista */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+/* Hero button */
+.hero .btn {
+    display: inline-block;
+    margin-top: 30px;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #ff4444; /* punainen nappi */
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #cc0000; /* tumma punainen hover-efekti */
+    transform: scale(1.05);
+}
