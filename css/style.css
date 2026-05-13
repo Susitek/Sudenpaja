@@ -151,9 +151,18 @@ h2 {
   box-shadow: 0 0 20px rgba(230,0,0,0.6);
 }
 
+.portfolio-item {
+  padding: 0;
+  overflow: hidden;
+}
+
 .portfolio-item img {
   width: 100%;
-  border-radius: 10px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
 }
 
 /* Lomake */
