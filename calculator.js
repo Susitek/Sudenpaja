@@ -14,11 +14,11 @@ const MIN_PRICE = 5.00; // Minimum price in euros
 // Material definitions
 const materials = [
     { name: "PLA", density: 1.24, price: 0.125 },  // €/g
-    { name: "ABS", density: 1.04, price: 0.020 }, // €/g
+    { name: "ABS", density: 1.04, price: 0.25 }, // €/g
     { name: "PETG", density: 1.27, price: 0.125 }, // €/g
-    { name: "TPU", density: 1.21, price: 0.030 }, // €/g
-    { name: "Nylon-CF", density: 1.14, price: 0.50 }, // €/g
-    { name: "ASA", density: 1.07, price: 0.030 } // €/g
+    { name: "TPU", density: 1.22, price: 0.375 }, // €/g
+    { name: "Nylon-CF", density: 1.24, price: 0.625 }, // €/g
+    { name: "ASA", density: 1.07, price: 0.375 } // €/g
 ];
 
 try {
