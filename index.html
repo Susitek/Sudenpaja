@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sudenpaja – 3D-tulostusta, rakentelua ja ratkaisuja</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calculator.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
@@ -18,6 +19,7 @@
       <li><a href="#home">Kotisivu</a></li>
       <li><a href="#services">Palvelut</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#calculator">Hintalaskuri</a></li>
       <li><a href="#blog">Blogi</a></li>
       <li><a href="#about">Tietoa meistä</a></li>
       <li><a href="#contact">Ota yhteyttä</a></li>
@@ -50,6 +52,10 @@
       <h3>FPV & RC</h3>
       <p>Dronet, varaosat ja mittatilausratkaisut.</p>
     </div>
+    <div class="service">
+      <h3>3D-skannaus</h3>
+      <p>Esineiden digitalisointi ja tarkat 3D-mallit.</p>
+    </div>
   </div>
 </section>
 
@@ -62,6 +68,56 @@
     <div class="portfolio-item"><img src="images/sample3.jpg" alt="FPV"></div>
   </div>
 </section>
+
+<!-- STL Viewer & Calculator -->
+<section id="calculator" class="section" style="display: none;">
+  <h2>3D-tulostuksen hintalaskuri</h2>
+  <p class="calculator-intro">
+    Lataa STL-tiedostosi alla saadaksesi välittömän hintatarjouksen.
+    Laskurimme analysoi mallisi ja antaa sinulle tilavuuden, painon ja
+    arvioidun hinnan valitsemasi materiaalin perusteella.
+  </p>
+
+  <div id="viewer-container">
+    <div id="info">
+      <h3>Hinta-arvio</h3>
+      <input type="file" id="file-input" accept=".stl">
+      
+      <div class="hidden-until-load">
+        <div id="weight-display">Paino: - g</div>
+
+        <label for="material-select">Materiaali:</label>
+        <select id="material-select"></select>
+        <div id="material-details"></div>
+
+        <label for="wall-thickness">Seinämänpaksuus (mm):</label>
+        <input type="number" id="wall-thickness" min="0.4" max="5" step="0.4" value="1.2">
+
+        <label for="infill-percentage">Täyttö (%):</label>
+        <input type="range" id="infill-percentage" min="0" max="100" value="20">
+        <div id="infill-display">20%</div>
+
+        <div id="price-display">Hinta: €0.00</div>
+        <div id="min-price-message"></div>
+
+        <div class="viewer-controls">
+          Vasen klikkaus: Pyöritä<br>
+          Oikea klikkaus: Panoroi<br>
+          Shift + Rulla: Zoomaa
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="importmap">
+  {
+    "imports": {
+      "three": "./lib/three.module.min.js",
+      "three/addons/": "./lib/"
+    }
+  }
+</script>
+<script type="module" src="calculator.js"></script>
 
 <!-- Blogi -->
 <section id="blog" class="section">
